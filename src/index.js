@@ -9,6 +9,7 @@ const testSetSize = .20;
 var trackingEnabled = true;
 var saveState,
     visitedFrames, //keep track of the visited frames
+	visitedFrameNames = [], // the name of the visited frames
     videotagging,
     detection,
     trackingExtension,
@@ -222,7 +223,7 @@ function openPath(pathName, isDir) {
       if (config.scd){
         document.getElementById("scd").checked = config.scd;
       }
-      
+      $('#labeler').val(config.labeler);
     } catch (e) {
       console.log(`Error loading save file ${e.message}`);
     }
@@ -246,7 +247,7 @@ function openPath(pathName, isDir) {
           visitedFrames = new Set(config.visitedFrames);
         } else {
           videotagging.inputframes = {};
-           visitedFrames =  (isDir) ? new Set([0]) : new Set();
+          visitedFrames =  (isDir) ? new Set([0]) : new Set();
         } 
 
         videotagging.src = ''; // ensures reload if user opens same video 
@@ -256,13 +257,18 @@ function openPath(pathName, isDir) {
 
             //get list of images in directory
             var files = fs.readdirSync(pathName);
+			
+			// save the origin file name
+			visitedFrameNames = files;
             
             videotagging.imagelist = files.filter(function(file){
                   return file.match(/.(jpg|jpeg|png|gif)$/i);
             });
 
             if (videotagging.imagelist.length){
-              videotagging.imagelist = videotagging.imagelist.map((filepath) => {return path.join(pathName,filepath)});
+              videotagging.imagelist = videotagging.imagelist.map((filepath) => {
+				  return path.join(pathName,filepath)
+		      });
               videotagging.src = pathName; 
               //track visited frames
               $("#video-tagging").off("stepFwdClicked-AfterStep", updateVisitedFrames);
@@ -270,7 +276,6 @@ function openPath(pathName, isDir) {
               $("#video-tagging").on("stepFwdClicked-AfterStep", () => {
                   //update title to match src
                    $('title').text(`Image Tagging Job: ${path.basename(videotagging.curImg.src)}`);
-
               });
 
               //auto-save 
@@ -326,6 +331,8 @@ function save() {
       "suggestiontype": $('#suggestiontype').val(),
       "scd": document.getElementById("scd").checked,
       "visitedFrames": Array.from(visitedFrames),
+	  "visitedFrameNames": Array.from(visitedFrameNames),
+	  "labeler": $('#labeler').val()
     };
     //if nothing changed don't save
     if (saveState === JSON.stringify(saveObject) ) {
