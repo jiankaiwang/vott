@@ -1,0 +1,30 @@
+{
+  "name": "vott",
+  "version": "1.0.0",
+  "description": "An electron app for building end to end Object Detection Models with CNTK from Sample Videos.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/CatalystCode/VOTT",
+  "keywords": [
+    "Video-Tagging",
+    "CNTK",
+    "Deep-Learning",
+    "Object-Detection"
+  ],
+  "readme": "README.md",
+  "author": "aribornstein",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.2"
+  },
+  "dependencies": {
+    "async": "^2.1.5",
+    "cntk-fastrcnn": "^0.2.6",
+    "electron": "^1.4.1",
+    "electron-window-state": "^4.0.2",
+    "remote": "^0.2.6",
+    "replace": "^0.3.0"
+  }
+}

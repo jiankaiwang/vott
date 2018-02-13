@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#load-message-container{
+  min-width: 700px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -200px; /* half the height of the element */
+}
+
+#load-text{
+    margin-bottom: 30px;
+}
+
+#load-icons{
+    display: block;
+    width: 645px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dirImage  
+ {
+  width:300px;
+  display:inline-block;
+  margin-right: 20px;
+ }
+
+
+#vidImage{
+  width:300px;
+  display:inline-block;
+  margin-left: 20px;
+}
+
+svg:hover path { 
+  fill:red !important;
+}
+
+label {
+    font-size: 16px;
+}
+
+#load-form-container {
+    padding: 0 20px;
+}
+
+#required{
+    display: inline;
+}
+
+#load-text{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.regionGroup {
+    margin-left: 10px;
+}
+
+#framerate:invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+.invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+.form-control {
+     max-width:800px;
+}
+
+.file_selector{
+    width:30px; 
+    vertical-align: middle;
+    display:inline-block;
+}
+
+#video-tagging {
+    margin: 0 auto;
+}
+
+#video-tagging-container {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+}
+
+.bootstrap-tagsinput {
+    display: block;
+    min-height: 34px;
+    max-width: 500px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    z-index: 999;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn-primary, .label-info {
+  color: #3c3c3c !important;
+  margin-right: 5px;
+  background-color: #d5d5d5 !important;
+  border: 0px;
+  border-radius: 5px;
+  }
+
+#loadButton {
+      margin-top: 5px;
+      
+}
+
+#loadButton:hover {
+  color: #3c3c3c;
+  background-color: #a2a5a3;
+  border: 0px;
+  border-radius: 5px;
+}
+
+#methodLabel{
+    display: block !important;
+}
+
+#suggestiontype{
+    display: inline-block;
+}
+
+#scd{
+    margin-left: 10px;
+}
