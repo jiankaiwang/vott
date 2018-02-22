@@ -1,0 +1,2 @@
+cd ./vott
+npm start
