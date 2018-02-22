@@ -159,35 +159,46 @@ Specify the following export configuration settings:
 
     ![](media/image-option.jpg)
 
+
+
  -   Load an image directory by selecting it.
 
     ![](media/2_load.jpg)
+
+
 
  -   Configure the tagging job and specify the settings in the screenshot below:
 
     ![](media/3_image_Job_Configuration.jpg)
 
-    **Frame Extraction Rate**: number of frames to tag per second of video<br>
 
-    **Tagging Region Type**:  type of bounding box for tagging regions<br>
-      - *Rectangle*: tag bounding boxes of any dimension
-      - *Square*: tag bounding boxes of auto-fixed dimensions
+**Frame Extraction Rate**: number of frames to tag per second of video
 
-    **Labels**: labels of the tagged regions (e.g. `Cat`, `Dog`, `Horse`, `Person`)<br>
+**Tagging Region Type**:  type of bounding box for tagging regions
+	* Rectangle: tag bounding boxes of any dimension
+	* Square: tag bounding boxes of auto-fixed dimensions
+	* Labels: labels of the tagged regions (e.g. `Cat`, `Dog`, `Horse`, `Person`)
 
-    **Type the name in abbreviation**: labeler name (optional)
+**Type the name in abbreviation**: labeler name (optional)
+
+
 
  -   Tag each Image
 
-    ![](media/4_image_Tagging_Job.jpg)
+    ![media/4_image_Tagging_Job.jpg](media/4_image_Tagging_Job.jpg)
+
+    ​
 
     **Tagging**: click and drag a bounding box around the desired area, then move or resize the region until it fits the object
+
      - Selected regions appear as red ![red](https://placehold.it/15/f03c15/000000?text=+) and unselected regions will appear as blue ![#1589F0](https://placehold.it/15/1589F0/000000?text=+).
      - Assign a tag to a region by clicking on it and selecting the desired tag from the labeling toolbar at the bottom of the tagging control
      - Click the ![cleartags](media/cleartags.png) button to clear all tags on a given frame
 
     **Navigation**: users can navigate between video frames by using the ![prev-nxt](media/prev-next.png) buttons, the left/right arrow keys, or the video skip bar
      - Tags are auto-saved each time a frame is changed
+
+
 
  -   Export Image directory tags Tags using the Object Detection Menu or Ctrl/Cmd + E
 
