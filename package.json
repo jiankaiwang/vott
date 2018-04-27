@@ -17,12 +17,12 @@
   "author": "aribornstein",
   "license": "MIT",
   "devDependencies": {
-    "bower": "^1.7.2"
+    "bower": "^1.8.4"
   },
   "dependencies": {
-    "async": "^2.1.5",
+    "async": "^2.6.0",
     "cntk-fastrcnn": "^0.2.6",
-    "electron": "^1.4.1",
+    "electron": "^1.8.4",
     "electron-window-state": "^4.0.2",
     "remote": "^0.2.6",
     "replace": "^0.3.0"

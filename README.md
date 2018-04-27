@@ -185,7 +185,7 @@ Specify the following export configuration settings:
 
  -   Tag each Image
 
-    ![media/4_image_Tagging_Job.jpg](media/4_image_Tagging_Job.jpg)
+    ![](media/4_image_Tagging_Job.jpg)
 
     ​
 
